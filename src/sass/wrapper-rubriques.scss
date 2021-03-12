@@ -1,0 +1,30 @@
+.wrapper-rubriques {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0.5rem;
+    .container-rubrique {
+      flex: 50 50 auto;
+      margin: 0 1rem;
+      text-align: center;
+      white-space: nowrap;
+      .rubrique {
+        color: white;
+        padding:0.5rem; 
+        
+        /* border-radius */
+        -webkit-border-radius: 0.7rem;
+        -moz-border-radius: 0.7rem;
+        border-radius: 0.7rem;
+        /* box-shadow */
+        -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 0.5rem;
+        -moz-box-shadow: rgba(0,0,0,0.8) 0 0 0.5rem;
+        box-shadow: rgba(0,0,0,0.8) 0 0 0.5rem;
+      }
+    }
+  }
+  
+  .bluredLabel {
+    opacity: 0.3;
+    border: white 1px solid;
+   }

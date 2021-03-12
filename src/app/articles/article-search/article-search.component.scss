@@ -1,0 +1,26 @@
+
+  #searchBoxInput {
+    width: 100%;
+    border: none;
+    background: white;
+    height: 1.7rem;
+    font-size: 1.3rem;
+  }
+  #resultsBox {
+    display: none;
+    background: url("../../../assets/img/autres/results1.png");
+  }
+
+  input:focus {
+    border: #eeeeaa 0.5rem;
+  }
+
+  input:focus + #resultsBox { 
+    display: flex;
+   }
+    select.form-control:not([size]):not([multiple]) {
+      height: 3.5rem;
+    }
+    .card {
+        max-width: 20rem;
+    }

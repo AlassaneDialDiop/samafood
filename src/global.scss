@@ -1,0 +1,190 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+
+@import './sass/color.scss';
+@import './sass/scrollbar.scss';
+@import './sass/modal.scss';
+@import './sass/wrapper-rubriques.scss';
+
+@import url("https://use.typekit.net/jnq3uxd.css");
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$fontFamily: 'sofia-pro';
+
+$medium: #989aa2;
+$medium-tint: #a2a4ab;
+$tertiary: #7044ff;
+$light: #f4f5f8;
+$light-tint: #f5f6f9;
+
+$headerFontSize: 1.5rem;
+$headerFontWeight: 500;
+
+$iconHeaderMaxHeight: 1.5rem;
+$iconAsadHeaderMaxHeight: 2.7rem;
+$logoHeight: 4rem;
+
+button:focus {
+  outline: none;
+}
+.ion-page{
+  overflow-y: scroll;
+}
+
+.containerLayout{
+  max-width: 800px;
+  margin: auto
+}
+
+a{
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.btn-border {
+  border: solid 0.04rem $tertiary !important;;
+}
+body {
+    margin: 0;
+}
+.mat-form-field {
+  line-height: 1.5rem;
+  width: 15rem;
+}
+.mat-card-image {
+  width: 100%;
+}
+
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  .card {
+    padding: 0.5rem;
+    flex: 0 0 auto;
+  }
+}
+//
+//
+//
+//
+.mat-dialog-container {
+  padding: 0px !important;
+}
+
+//
+
+.articleNormal{
+      width: 15rem;
+      margin-right: 2rem;
+      padding: 0;
+      background: $medium;
+      color: $light;
+
+      
+    .divInfosArticle {
+          font-size: 1.2rem;
+          padding: 0 1rem;
+          height:12rem;
+
+          .typeArticle {
+            height: 1rem;
+            width: 1rem;
+            padding: 0.5rem 1rem;
+            margin: 1rem;
+          }
+          
+          .source {
+            color: $medium-tint;
+            text-align: center;
+            height: 2rem;
+          }
+          
+          .titre {
+            font-size: 1rem;
+            height: 5rem;
+            margin: auto;
+          }
+    }
+
+      .divImgArticle {
+            height:10rem;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            img{
+              width: 100%;
+            }
+      }
+}
+.articleNormal:hover {
+    background: $medium-tint;
+}
+
+//
+//
+
+.fillFooter{
+  content: "";
+  height: 0.1rem;
+  margin: 1.5rem 0;
+  background: $medium-tint;
+}
+
+.fillSectionName{
+  content: "";
+  height: 0.1rem;
+  margin: 1.5rem 0;
+  background: $medium-tint;
+}
+
+.plusFooter {
+  font-size: 2rem;
+  img {
+    height: 2rem;
+  }
+  
+}
+
+
+  .modal-dialog {
+      max-width: 200rem;
+      width: auto;
+      margin-top: 30rem;
+      margin-left: 20rem;
+      margin-right: 20rem;
+      background: $medium;
+  }
+
+
+  .modal {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+    ////
+
+    ////
+    hr{
+      margin-bottom: 21px;
+      border: 0;
+      border-top: 1px solid $medium-tint;
+    }
+    //////
+
+    ///
+    ///
+    ///
+    ////
+    
+
+

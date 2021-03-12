@@ -1,0 +1,21 @@
+<br>
+<div class="singleArticle">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <img *ngIf="article.photo1" [src]="article.photo1">
+        <h4>{{ article.importance}}</h4>
+        <h1>{{ article.nom }}</h1>
+        <p>{{ article.adresse }}</p>
+        <h3>Date: {{ articleDate | date:'full' }}</h3>
+        <hr>
+        <button class="btn btn-default" (click)="iik()">ur</button>
+        <button class="btn btn-default" (click)="onBack()">Retour</button>
+      </div>
+    </div>
+  </div>
+    
+    <h4 *ngIf='!article' class="center">
+      <app-loader></app-loader>
+    </h4>
+</div>

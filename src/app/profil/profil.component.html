@@ -1,0 +1,27 @@
+<div>
+    <mat-card class="mat-card-full-width">
+        <mat-card-title>
+                <div id="rubriqueTitle">
+                        <span>Mes favoris</span>
+                        <hr>
+                    </div>
+        </mat-card-title>
+        <mat-card-content>
+            <div>
+                <div *ngFor="let i of [10*page+1, 10*page + 3 ,10*page +7,10*page +9]">
+                    <div class="rowArticles" *ngIf="(globalService.savedData.savedArticles[i-1] != undefined)">
+                        <article-card class="leftArticle" *ngIf="(globalService.savedData.savedArticles[i-1] != undefined)" 
+                        [article]="globalService.savedData.savedArticles[i-1]"></article-card>
+                        <article-card class="rightArticle" *ngIf="(globalService.savedData.savedArticles[i] != undefined)" 
+                        [article]="globalService.savedData.savedArticles[i]"></article-card>
+                    </div>
+                </div>
+            </div>
+            <div class="navigateDiv" *ngIf="(globalService.savedData.savedArticles[9] != undefined)">
+                <button class="navigateButton" (click)="modifyPage(-1)">Précédent</button>
+                <span>{{page+1}}</span>
+                <button class="navigateButton" (click)="modifyPage(1)">Suivant</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

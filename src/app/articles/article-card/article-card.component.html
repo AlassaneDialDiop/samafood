@@ -1,0 +1,33 @@
+<mat-card *ngIf="article!==undefined" class="normalCard">                     
+    <div class="divImg"  (click)="modalArticle(article)" >
+        <img src="{{article.photo1}}" alt="{{article.nom}}">
+    </div>
+    <button *ngIf="!saved" class="saveButton" (click)="globalService.saveArticle(article)">
+        <ion-icon name="time"></ion-icon>
+    </button>
+    <button *ngIf="saved" class="saveButton" (click)="globalService.unsaveArticle(article)">
+        <ion-icon name="checkmark"></ion-icon>
+    </button>
+    <div class="divContent" (click)="modalArticle(article)" >
+        <mat-card-title>
+            {{article.nom}}
+            {{article.distance}}
+        </mat-card-title>
+        <mat-card-content>
+            <div style="display:flex;">
+                <div class="content wrapper-rubriques">
+                    <div class="container-rubrique" *ngFor="let type of article.types">
+                        <span *ngIf="type !== 'A la une'" class="rubrique {{ type | articleTypeColor}}">
+                            {{ type }}
+                        </span>
+                    </div>
+                </div>
+                <div class="divSource">
+                    <span>
+                        {{article.source}}
+                    </span>
+                </div>
+            </div>
+        </mat-card-content>
+    </div>
+</mat-card>

@@ -1,0 +1,13 @@
+<div>
+    <mat-card class="searchCard" >
+        <mat-card-content> 
+            <input id="searchBoxInput" #searchBox (keyup)="search(searchBox.value)"
+                    placeholder="Rechercher un traiteur, un restaurant, un patissier ..."/>
+            <div id="resultsBox" class="scrolling-wrapper-flexbox">
+                    <div class="card" *ngFor="let article of articles$ | async">
+                        <article-card [article]="article"></article-card>
+                    </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

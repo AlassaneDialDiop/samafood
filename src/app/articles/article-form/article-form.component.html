@@ -1,0 +1,97 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h2>Enregistrer un nouvel article</h2>
+      <br>
+      <form [formGroup]="articleForm" (ngSubmit)="onSaveArticle()">
+          <div class="form-group">
+              <label for="id">Id</label>
+              <input type="number" min="1"  id="id" value="{{ lastId }}" readonly
+                     class="form-control" formControlName="id">
+            </div>
+        <div class="form-group">
+          <label for="titre">Titre</label>
+          <input type="text" id="titre" maxlength="100"
+                 class="form-control" formControlName="titre">
+        </div>
+        <div class="form-group">
+          <label for="auteur">Auteur</label>
+          <input type="text" id="auteur"
+                 class="form-control" formControlName="auteur">
+        </div>
+        <div class="form-group">
+          <label for="importance">Importance</label><br>
+          <select name="importance" id="importance"
+          class="form-control" formControlName="importance">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+        </div>
+        <form class="form-group">
+          <label for="types">Catégories</label>
+          <p *ngFor="let type of types">
+              <label>
+             
+              <span [attr.for]="type">
+                  <div class="{{ type | articleTypeColor }}">
+                  {{ type }}
+                  <input type="checkbox"
+                  class="filled-in"
+                  id="{{ type }}"
+                  [value]="type"
+                  [checked]="hasType(type)"
+                  [disabled]="!isTypesValid(type)"
+                  (change)="selectType($event, type)"/>
+                  </div>
+              </span>
+              </label>
+          </p>
+      </form>
+        <div class="form-group">
+          <label for="source">Source</label>
+          <input type="text" id="source"
+                 class="form-control" formControlName="source">
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="datetime-local" id="date"
+                   class="form-control" formControlName="date" (change)="updateDate()" value="{{currentDateString}}">
+            <button type="button" (click)="actualiserDate()">Actualiser la date</button>
+          </div>
+        <div class="form-group">
+          <label for="texte">Texte</label><br>
+          <textarea style="width: 100%; height: 20rem;" placeholder="Entrez du contenu html" (change)="updateContenu($event.target.value)" [value]="contenuArticle"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="extrait">Extrait</label>
+          <input type="text" id="extrait"
+                 class="form-control" formControlName="extrait">
+        </div>
+        <!-- <div class="form-group">
+            <h4>Ajouter photo</h4>
+            <input type="file" (change)="detectFiles($event)"
+                   class="form-control" accept="image/*">
+            <p class="text-success" *ngIf="fileUploaded">Fichier uploadé</p>
+          </div> -->
+          <div>
+              <img-cropper [image]="data" [settings]="cropperSettings"></img-cropper><br>
+              <img [src]="data.image" [width]="cropperSettings.croppedWidth" [height]="cropperSettings.croppedHeight">
+          </div>
+        <br>
+        <p class="text-success" *ngIf="fileUploaded">Fichier uploadé</p>
+
+        <button class="btn btn-primary" 
+                type="button" (click)="validCroppedImg()">Valider l'image
+        </button>
+        <button class="btn btn-success" [disabled]="!(fileUploaded && articleForm.valid) || saving"
+                type="submit">Enregistrer
+        </button>
+  
+        <button class="btn btn-primary" 
+                type="button" (click)="printD()">Ve
+        </button>
+      </form>
+    </div>
+  </div>

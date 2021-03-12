@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-grid id="grid">
+        <div class="vertjaunerouge"></div>
+        <ion-row id="rowLoginModes">
+                <ion-col>
+                                <ion-grid id="gridLoginModes">
+                                        <ion-row class="rowLoginMode">
+                                                <ion-col size="12">
+                                                        <ion-button [disabled]="logService.disableButtonNoLog" shape="round" color="primary" fill="outline" (click)="logService.goHome()">
+                                                                <ion-grid>
+                                                                        <ion-row>
+                                                                                <ion-col>
+                                                                                        <img src="assets/images/nolog.svg">
+                                                                                </ion-col>
+                                                                        </ion-row>
+                                                                        <ion-row>
+                                                                                <ion-col>
+                                                                                        <p>
+                                                                                                Je préfère ne pas me connecter.
+                                                                                        </p>
+                                                                                </ion-col>
+                                                                        </ion-row>
+                                                                </ion-grid>
+                                                        </ion-button>
+                                                </ion-col>
+                                        </ion-row>
+                                </ion-grid>
+                        </ion-col>
+        </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,63 @@
+<div *ngIf="articlesService.dataLoaded">
+    <div class="wrapper-rubriques">
+        <div class="container-rubrique" *ngFor="let type of allTypes"  
+        [ngClass]="{'bluredLabel': !articlesService.typesSelected.includes(type)}">
+            <span [attr.for]="type">
+                <label for="{{ type }}">
+                    <div class="rubrique {{ type | articleTypeColor }}">
+                    {{ type }}
+                    <input type="checkbox"
+                    style="display:none;"
+                    class="filled-in"
+                    id="{{ type }}"
+                    [value]="type"
+                    [checked]="hasType(type)"
+                    (change)="selectType($event, type)"/>
+                    </div>
+                </label>
+            </span>
+        </div>
+        <div class="container-rubrique">
+            <span (click)="toutRienFonctionRubrique()">
+                    <div class="material-grey rubrique">
+                    {{ toutRienRubrique }}
+                    </div>
+            </span>
+        </div>
+    </div>
+    
+    <div class="wrapper-rubriques">
+        <div class="container-rubrique" *ngFor="let source of allSources"  
+        [ngClass]="{'bluredLabel': !articlesService.sourcesSelected.includes(source)}">
+            <span [attr.for]="source">
+                <label for="{{ source }}">
+                    <div class="rubrique {{ source | articleSourceColor }}">
+                    {{ source }}
+                    <input type="checkbox"
+                    style="display:none;"
+                    class="filled-in"
+                    id="{{ source }}"
+                    [value]="source"
+                    [checked]="hasSource(source)"
+                    (change)="selectSource($event, source)"/>
+                    </div>
+                </label>
+            </span>
+        </div>
+        <div class="container-rubrique">
+            <span (click)="toutRienFonctionSource()">
+                    <div class="material-grey rubrique">
+                    {{ toutRienSource }}
+                    </div>
+            </span>
+        </div>
+    </div>
+    <div class="containerLayout">
+        <div *ngFor="let section of articlesService.sections">
+                <div *ngIf="articlesService.typesSelected.includes(section.name)">
+                    <section-article [section]="section"></section-article>
+                    <br style="clear: both;">
+                </div>
+        </div>
+    </div>
+</div>

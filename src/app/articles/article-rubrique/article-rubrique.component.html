@@ -1,0 +1,51 @@
+<div *ngIf="articlesService.dataLoaded">
+    <div *ngIf="articlesService.dataLoaded && articlesRubrique!=undefined" >
+    <div id="rubriqueTitle">
+        <span>{{rubriqueName}}</span>
+        <hr>
+    </div>
+    
+    <div class="wrapper-rubriques">
+        <div class="container-rubrique" *ngFor="let source of allSources"  
+        [ngClass]="{'bluredLabel': !articlesService.sourcesSelected.includes(source)}">
+            <span [attr.for]="source">
+                <label for="{{ source }}">
+                    <div class="rubrique {{ source | articleSourceColor }}">
+                    {{ source }}
+                    <input type="checkbox"
+                    style="display:none;"
+                    class="filled-in"
+                    id="{{ source }}"
+                    [value]="source"
+                    [checked]="hasSource(source)"
+                    (change)="selectSource($event, source)"/>
+                    </div>
+                </label>
+            </span>
+        </div>
+        <div class="container-rubrique">
+            <span (click)="toutRienFonctionSource()">
+                    <div class="material-grey rubrique">
+                    {{ toutRienSource }}
+                    </div>
+            </span>
+        </div>
+    </div>
+
+    <article-important-card *ngIf="(articlesRubrique[0] != undefined) && page == 0" [article]="articlesRubrique[0]"></article-important-card>
+
+        <div>
+            <div *ngFor="let i of [10*page+1, 10*page + 3 ,10*page +7,10*page +9]">
+                <div class="rowArticles" *ngIf="(articlesRubrique[i] != undefined)">
+                    <article-card class="leftArticle" [article]="articlesRubrique[i]"></article-card>
+                    <article-card class="rightArticle" [article]="articlesRubrique[i+1]"></article-card>
+                </div>
+            </div>
+        </div>
+        <div class="navigateDiv" *ngIf="(articlesRubrique[9] != undefined)">
+            <button class="navigateButton" (click)="modifyPage(-1)">Précédent</button>
+            <span>{{page+1}}</span>
+            <button class="navigateButton" (click)="modifyPage(1)">Suivant</button>
+        </div>
+    </div>
+</div>

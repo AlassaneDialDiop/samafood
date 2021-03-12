@@ -1,0 +1,45 @@
+#grid {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+#rowControl {
+    height: 10%;
+    width: 100%;
+    *{
+        width: 100%;
+    }
+}
+#rowLoginModes {
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+}
+#gridLoginModes{
+    height: 100%;
+    width: 90%;
+}
+.rowLoginMode{
+    height: 50%;
+    ion-col{
+        height: 100%;
+        ion-button{
+            height: 100%;
+            width: 100%;
+            img{
+                width: 80%;
+            }
+            p{
+                white-space: normal;
+                word-wrap: break-word;
+            }
+        }
+    }
+    
+}
+.logoRs{
+    border-radius: 2rem;
+}
+ion-col{
+    height: 100%;
+}

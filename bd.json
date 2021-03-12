@@ -1,0 +1,98 @@
+{
+  "traiteurs":{
+    "1":{
+      "nom": "Kiki traiteur",
+      "telephone1": "33 832 29 66",
+      "telephone2": "33 832 29 66",
+      "adresse": "Dakar",
+      "email": "a",
+      "photo1": "data:image/jpeg;base64,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",
+      "latitude":14.735746,
+      "longitude": -17.436470,
+      "facebookUrl": "",
+      "twitterUrl": "",
+      "instagramUrl": "",
+      "types": [
+        "Les plus populaires","Salés"],
+      "siteUrl": ""
+
+    },
+    "2":{
+      "nom": "Paris d'Amour",
+      "telephone1": "33 860 70 70",
+      "telephone2": "33 860 70 70",
+      "adresse": "Dakar",
+      "email": "b",
+      "photo1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTY9VmgVjSrH4rm4hhUf_xVLQ1WLiErNJJ8TjObLw7X9jpPkB5",
+      "latitude":  14.713142, 
+      "longitude": -17.474850,
+      "facebookUrl": "",
+      "twitterUrl": "",
+      "instagramUrl": "",
+      "types": [
+        "Les plus populaires","Sucrés"],
+      "siteUrl": ""
+    },
+    "3":{
+      "nom": "Dinota Traiteur",
+      "telephone1": "33 824 46 28",
+      "telephone2": "33 824 46 28",
+      "adresse": "Villa Citron , 1360, Dakar",
+      "photo1": "https://lh5.googleusercontent.com/p/AF1QipP5sHss0wzJoUizI_SfJ4FHZ_CA9yUM7UkZnGMx=w408-h306-k-no",
+      "email": "",
+      "latitude":14.736972,
+      "longitude":-17.47554,
+      "facebookUrl": "",
+      "twitterUrl": "",
+      "instagramUrl": "",
+      "types": [
+        "Livraison rapide","Evénements"],
+      "siteUrl": ""
+    },
+    "4":{
+      "nom": "LINDA Traiteur",
+      "telephone1": "33 821 69 25",
+      "telephone2": "33 821 69 25",
+      "adresse": "43 Rue Mousse Diop, Dakar",
+      "email": "",
+      "photo1": "https://lh5.googleusercontent.com/p/AF1QipMDn27MwS7QM1q_d1D77l2Dt2KEVJu_B-cVLIc=w408-h725-k-no",
+      "latitude": 14.672692,
+      "longitude":-17.435128,
+      "facebookUrl": "",
+      "twitterUrl": "",
+      "instagramUrl": "",
+      "types": [
+        "Les plus populaires","Livraison rapide","Evénements","Salés","Sucrés","Plat sénégalais",
+        "Gastronomie africaine","Monde arabe"],
+      "siteUrl": ""
+    },
+    "5":{
+      "nom": "Nem vietnamien",
+      "telephone1": "77 535 44 96",
+      "telephone2": "77 535 44 96",
+      "adresse": "Dakar",
+      "email": "e",
+      "photo1": "https://geo2.ggpht.com/cbk?panoid=9ygChs1BT_eO8OVtG1Ev-Q&output=thumbnail&cb_client=search.TACTILE.gps&thumb=2&w=408&h=240&yaw=22.631315&pitch=0&thumbfov=100",
+      "latitude":0,
+      "longitude":0,
+      "facebookUrl": "",
+      "twitterUrl": "",
+      "instagramUrl": "",
+      "types": [
+        "Livraison rapide","Salés"],
+      "siteUrl": ""
+    }
+  },
+  "users": {
+    "1": {
+      "username": "user",
+      "password": "user",
+      "email": "user",
+      "prenom": "user",
+      "nom": "user",
+      "latitude": 14.7223910,
+      "longitude":  -17.4644930,
+      "types": 0
+    }
+  }
+}

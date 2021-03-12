@@ -1,0 +1,83 @@
+.normalCard {
+    width: 100%;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    .divImg {
+        width: 100%;
+        height: 8rem;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+    .divContent {
+        font-size: 0.8rem;
+        .mat-card-title {
+            padding: 0.5rem;
+            height: 8rem;
+            font-size: 0.8rem;
+        }
+        .mat-card-content {
+            height: 3rem;
+            margin: 0;
+            .divSource{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 0.3rem;
+                font-size: 1rem;
+                text-align: center;
+                /* border-radius */
+                -webkit-border-radius: 0.7rem;
+                -moz-border-radius: 0.7rem;
+                border-radius: 0.9rem 0.2rem 0 0.2rem;
+                /* box-shadow */
+                -webkit-box-shadow: rgba(0,0,0,0.4) 0px 0 0.4rem;
+                -moz-box-shadow: rgba(0,0,0,0.4) 0 0 0.4rem;
+                box-shadow: rgba(0,0,0,0.4) 0 0 0.4rem;
+            }
+            .wrapper-rubriques {
+                
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                flex-wrap: nowrap; 
+                overflow-x: auto; 
+                margin-left: auto; 
+                margin-right: auto;
+                padding-left: 1rem;
+                .container-rubrique {
+                    flex: 0 0 auto;
+                    margin: 0.5rem 0;
+                    .rubrique {
+                        color: white;
+                        padding:0.5rem; 
+                        /* border-radius */
+                        -webkit-border-radius: 0.7rem;
+                        -moz-border-radius: 0.7rem;
+                        border-radius: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.saveButton{
+    background: white;
+    width: 2rem;
+    height: 2rem;
+    border-style: solid;
+    border-radius: 0 0 0 1rem;
+    border-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    ion-icon{
+        width: 100%;
+        height:100%;
+        color: black;
+    }
+}

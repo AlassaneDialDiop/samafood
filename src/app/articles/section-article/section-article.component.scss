@@ -1,0 +1,20 @@
+
+article-card{
+    display: flex;
+    width: 14rem;
+}
+
+#sectionName {
+    img {
+        width: 1.5rem;
+    }
+}
+
+.mat-card-full-width{
+    margin:0;
+    padding-left:0;
+    padding-right: 0; 
+    .mat-card-title{
+        padding-left: 1.5rem;
+    }
+  }

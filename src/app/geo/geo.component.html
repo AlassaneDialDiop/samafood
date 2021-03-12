@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Où êtes-vous?
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-button color="tertiary" class="btnPos" (click)="enterPos()">
+    Entrer ma position 
+    <ion-icon color="light" name="pin"></ion-icon>
+  </ion-button>
+  <div class="mapContainer">
+    <ion-icon color="tertiary" name="locate" class="locateIcon"></ion-icon>
+    <div #mapElement class="map">
+    </div>
+  </div>
+</ion-content>

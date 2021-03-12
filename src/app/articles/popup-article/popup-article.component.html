@@ -1,0 +1,57 @@
+<ion-content class="popup">
+    <button id="closeButton" (click)="closeModal()">
+        <ion-icon name="close-circle-outline"></ion-icon>
+    </button>
+    <mat-card *ngIf="article!==undefined" class="normalCard">                     
+        <div class="divImg">
+            <img src="{{article.photo}}" alt="{{article.titre}}">
+        </div>
+        <div class="divContent">
+            <mat-card-title>
+                {{article.titre}}
+            </mat-card-title>
+            <mat-card-subtitle>
+                <h3>{{ article.auteur }}</h3>
+            </mat-card-subtitle>
+            <mat-card-content>
+                <div>
+                    <div class="content wrapper-rubriques">
+                        <div class="container-rubrique" *ngFor="let type of article.types">
+                            <span *ngIf="type !== 'A la une'" class="rubrique {{ type | articleTypeColor}}">
+                                {{ type }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="divSource">
+                        <span>
+                            {{article.source}}
+                        </span>
+                        
+                
+            <button *ngIf="!saved" class="saveButton" (click)="globalService.saveArticle(article)">
+                <ion-icon name="clock"></ion-icon>
+                Ajouter à ma liste
+            </button>
+            <button *ngIf="saved" class="saveButton" (click)="globalService.unsaveArticle(article)">
+                <ion-icon name="checkmark"></ion-icon>
+                Retirer de ma liste
+            </button>
+            <button class="btn" (click)="openArticleInBrowser(article)">
+                <ion-icon name="book"></ion-icon>
+                Lire l'article
+            </button>
+                    </div>
+                </div>
+                
+                <p>{{ article.categorie }}</p>
+                <span>{{ article.nbVues }}</span>
+                <span>{{ article.nbCommentaires }}</span>
+                <span>{{ article.nbPartages }}</span>
+                <h3>Date: {{ articleDate | date:'full' }}</h3>
+
+                
+                <span>{{ article.extrait}}</span>
+            </mat-card-content>
+        </div>
+    </mat-card>
+</ion-content>

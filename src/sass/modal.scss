@@ -1,0 +1,29 @@
+
+
+.sc-ion-modal-md-h, .sc-ion-modal-ios-h {
+    --width: 95%;
+    --min-width: auto;
+    --max-width: auto;
+    --height: 95%;
+    --min-height: auto;
+    --max-height: auto;
+    --overflow: hidden;
+    --border-radius: 1rem;
+    --border-width: 0rem;
+    --border-style: solid;
+    --border-color: #ddd;
+    --background: var(--ion-background-color,#fff);
+    --box-shadow: 0 0 1px #ddd;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    contain: strict;
+  }

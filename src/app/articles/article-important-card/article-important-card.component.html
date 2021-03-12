@@ -1,0 +1,31 @@
+<mat-card *ngIf="article!==undefined" (click)="modalArticle(article)" class="importantCard">                     
+    <div class="divImg">
+        <img src="{{article.photo}}" alt="{{article.titre}}">
+    </div>
+    <div class="divContent">
+        <mat-card-title>
+            {{article.titre}}
+        </mat-card-title>
+        <mat-card-content>
+            <div style="display:flex;">
+                <div class="content wrapper-rubriques">
+                    <div class="container-rubrique" *ngFor="let type of article.types">
+                        <span *ngIf="type !== 'A la une'" class="rubrique {{ type | articleTypeColor}}">
+                            {{ type }}
+                        </span>
+                    </div>
+                </div>
+                <div class="divSource">
+                    <span>
+                        {{article.source}}
+                    </span>
+                </div>
+            </div>
+        </mat-card-content>
+        <button class="btn btn-default pull-right" (click)="onDeleteArticle(article)" 
+        *ngIf="this.isAdmin === 'true'">
+            <span class="glyphicon glyphicon-minus"></span>
+            Supprimer l'article
+        </button>
+    </div>
+</mat-card>

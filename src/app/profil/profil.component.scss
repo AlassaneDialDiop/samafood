@@ -1,0 +1,43 @@
+.rowArticles{
+    display: flex;
+    height: 20rem;
+}
+.leftArticle{
+    position: absolute;
+    left: 2.5%;
+}
+
+.rightArticle{
+    position: absolute;
+    right: 2.5%;
+}
+article-card{
+    width: 45%;
+}
+#rubriqueTitle{
+    font-size: 2rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+.navigateDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+
+    .navigateButton{
+        margin: 0 1rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        text-align: center;
+        background: white;
+        /* border-radius */
+        -webkit-border-radius: 0.7rem;
+        -moz-border-radius: 0.7rem;
+        border-radius: 0.9rem 0.9rem 0.9rem 0.9rem;
+        /* box-shadow */
+        -webkit-box-shadow: rgba(0,0,0,0.4) 0px 0 0.4rem;
+        -moz-box-shadow: rgba(0,0,0,0.4) 0 0 0.4rem;
+        box-shadow: rgba(0,0,0,0.4) 0 0 0.4rem;
+    }
+}

@@ -1,0 +1,17 @@
+<div *ngIf="articlesService.dataLoaded">
+    <mat-card class="mat-card-full-width">
+        <mat-card-title>
+                <span (click)="section.name === 'A la une' || goTo()" id="sectionName">{{section.name}}
+                        <img [src]="section.img" alt="">
+                    </span>
+        </mat-card-title>
+        <mat-card-content>
+            <div class="scrolling-wrapper-flexbox" *ngIf="articlesService.allArticles != undefined">
+                <div class="card" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">
+                        <article-card *ngIf="(articlesService.allArticles[section.name][i] != undefined) && (articlesService.sourcesSelected.includes(articlesService.allArticles[section.name][i].source))" 
+                        [article]="articlesService.allArticles[section.name][i]"></article-card>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
